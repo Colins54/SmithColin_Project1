@@ -1,39 +1,50 @@
-// 1. Import the all three objects (Song, Musician, Playlist) that you created in the MusicData.js module file
+class Song {
+  constructor(title, artist, album) {
+    this.title = title;
+    this.artist = artist;
+    this.album = album;
+  }
+}
 
+class Musician {
+  constructor(name, instrument, genre) {
+    this.name = name;
+    this.instrument = instrument;
+    this.genre = genre;
+  }
+}
 
-// 2. declare a new constant and assign to it a new musician object to describe the musician for the first song.
+class Playlist {
+  constructor(name, song1, song2, song3) {
+    this.name = name;
+    this.song1 = song1;
+    this.song2 = song2;
+    this.song3 = song3;
+  }
+  getInfo() {
+    console.log(`The playlist '${this.name}' has the following songs:`);
+    console.log(`${this.song1.title} by ${this.song1.artist},`);
+    console.log(`${this.song2.title} by ${this.song2.artist},`);
+    console.log(`${this.song3.title} by ${this.song3.artist},`);
+    console.log(`${this.song4.title} by ${this.song4.artist}.`);
+  }
+}
 
+const musician1 = new Musician("Parannoul", "Guitar", "Shoegaze");
 
+const musician2 = new Musician("Krovie", "Computer", "Electronic");
 
-// 3. declare a new constant and assign to it a new musician object to describe the musician for the second song.
+const musician3 = new Musician("Colin Smith", "Piano", "Electronic");
 
+const song1 = new Song("Solaris", musician1.name, "After the Magic");
 
+const song2 = new Song("Broadcast", musician2.name, "Pretend God Exists");
 
+const song3 = new Song("Reverie", musician3.name, "Moon Jumper");
 
-// 4. declare a new constant and assign to it a new musician object to describe the musician for the third song.
+const myPlaylist = new Playlist("My Favorite Tracks", song1, song2, song3);
 
-
-// 5. declare a new constant and assign to it a new Song object to describe the first song
-// (make sure to use the Musician object from step 2 in creating this Song object
-
-
-
-// 6. declare a new constant and assign to it a new Song object to describe the second song
-// (make sure to use the Musician object from step 3 in creating this Song object
-
-
-// 7. declare a new constant and assign to it a new Song object to describe the third song
-// (make sure to use the Musician object from step 4 in creating this Song object
-
-
-// 8. declare a new constant called myPlaylist and assign to it a new Playlist object and make sure to use the three Song objects
-//from steps 5, 6, & 7 when creating it.
-//It must be called myPlaylist
-//It must be called myPlaylist
-
-
-//9. call the .getInfo() method on myPlaylist
-
+myPlaylist.getInfo();
 
 //DO NOT EDIT BELOW THIS LINE
 //the code below here will insert the Playlist data into the webpage.
